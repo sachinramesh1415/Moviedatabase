@@ -1,0 +1,10 @@
+#hspace {
+    height: 72px;
+}
+#marcorr {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+.btn:hover {
+    cursor: initial;
+}

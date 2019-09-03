@@ -8,3 +8,6 @@
 .btn:hover {
     cursor: initial;
 }
+#butt {
+    cursor: pointer;
+}

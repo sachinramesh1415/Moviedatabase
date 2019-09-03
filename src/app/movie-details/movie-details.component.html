@@ -17,7 +17,10 @@
                     <p class="card-text">Release Date: {{movie.release_date}}</p>
                     <p class="card-text">Rating : {{movie.vote_average}} from {{movie.vote_count}} users</p>
                     <p class="card-text">Runtime : {{movie.runtime}}</p>
-                    <a href="{{movie.homepage}}" class="card-text">{{movie.homepage}}</a>
+                    <a href="{{movie.homepage}}" class="card-text">{{movie.homepage}}</a><br>
+                    <div *ngIf="check; then Fav else notFav"></div>
+                    <ng-template #notFav><button  (click)="addFav()" type="button" class="btn btn-outline-primary" id="butt"><i class="far fa-bookmark fa-2x float-left"></i>Add to Favorites</button></ng-template>
+                    <ng-template #Fav><button type="button" class="btn btn-outline-success"><i class="far fa-bookmark fa-2x float-left"></i>Added to Favorites</button></ng-template>
                 </div>
             </div>
         </div>

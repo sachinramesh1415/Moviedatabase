@@ -3,7 +3,6 @@ export class fav {
     poster_path: string;
     title: string;
     overview: string;
-    release_date: string;
     vote_average: number;
-    comments: [];
+    comments: string[];
 }

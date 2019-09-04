@@ -1,3 +1,11 @@
 #hspace {
     height: 72px;
 }
+#comm {
+    display: inline;
+    font-size: 30px;
+}
+#edit {
+    margin-bottom: 10px;
+    margin-left: 4rem;
+}

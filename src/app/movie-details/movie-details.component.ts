@@ -22,8 +22,7 @@ export class MovieDetailsComponent implements OnInit {
     this._getmoviedetailsService.checkFav(this.movieID).subscribe(_checkFav => this.check = true, error => this.check = false);
   }
   addFav() {
-    this._addF.addFavorites(this.movie).subscribe();
-    this.ngOnInit();
+    this._addF.addFavorites(this.movie).subscribe(()=>this.ngOnInit());
   }
 
 }

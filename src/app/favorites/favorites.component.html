@@ -15,15 +15,23 @@
                     <div class="card-body">
                         <h5 class="card-title">{{f.title}}</h5>
                         <p class="card-text">{{f.overview}}</p>
-                        <p class="card-text">Release Date : {{f.release_date}}</p>
                         <p class="card-text">Rating : {{f.vote_average}}</p>
                         <div class="form-group">
                             <label for="comment">Comments</label>
-                            <p *ngFor="let i of f.comments">{{i}}</p>
-                            <textarea #comment class="form-control" placeholder="Enter Comments here" rows="2" id="commentarea"></textarea>
-                            <button (click)="addComm(comment.value, f)" type="button" class="btn btn-outline-secondary">Add Comment</button>
+                            <div *ngFor="let i of f.comments, let in=index">
+                                <p id="comm">{{i}}</p>
+                                <button type="button" (click)="edit(in)" class="btn btn-dark" id="edit"><i class="fas fa-pen"></i>Edit</button>
+                            </div>
+                            <div *ngIf="editt; else elseBlock">
+                                <textarea #comment class="form-control mb-2" placeholder="Enter Comments here" rows="2" id="commentarea"></textarea>
+                                <button (click)="addComm(comment.value, f)" type="submit" class="btn btn-outline-secondary">Add Comment</button>
+                            </div>
+                            <ng-template #elseBlock>
+                                <textarea #comment1 class="form-control mb-2" value="{{f.comments[editn]}}" rows="2" id="commentarea"></textarea>
+                                <button (click)="editComm(comment1.value, f)" type="submit" class="btn btn-outline-secondary">Edit Comment</button>
+                            </ng-template>
                         </div>
-                        <button type="button" (click)="removeFav(f.id); removeFav(f.id)" class="btn btn-outline-danger">Remove from Favorites</button>
+                        <button type="button" (click)="removeFav(f.id)" class="btn btn-outline-danger">Remove from Favorites</button>
                     </div>
                 </div>
             </div>

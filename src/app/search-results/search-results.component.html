@@ -1,5 +1,5 @@
 <div id="hspace"></div>
-<div class="jumbotron jumbotron-fluid">
+<section class="jumbotron jumbotron-fluid">
    <form action="">
        <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
            <div class="input-group">
@@ -10,9 +10,9 @@
            </div>
        </div>
    </form>
-</div>
+</section>
 <h3 style="text-align: center" class="mb-4">Showing results for "{{quer}}"</h3>
-<div class="container">
+<main class="container">
     <div class="row mb-3" *ngFor="let movie of movies.results">
         <div class="card">
             <div class="row no-gutters">
@@ -31,4 +31,4 @@
             </div>
         </div>
     </div>
-</div>
+</main>

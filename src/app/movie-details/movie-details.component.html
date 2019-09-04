@@ -1,11 +1,11 @@
 <div id="hspace"></div>
-<div class="container">
+<main class="container">
     <div class="card" id="marcorr">
         <div class="row no-gutters">
-            <div class="col-md-4">
+            <aside class="col-md-4">
                 <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img" alt="Movie poster">
-            </div>
-            <div class="col-md-8">
+            </aside>
+            <article class="col-md-8">
                 <div class="card-body">
                     <h3 class="card-title text-center">{{movie.title}}</h3>
                     <div style="text-align: center">
@@ -19,10 +19,10 @@
                     <p class="card-text">Runtime : {{movie.runtime}}</p>
                     <a href="{{movie.homepage}}" class="card-text">{{movie.homepage}}</a><br>
                     <div *ngIf="check; then Fav else notFav"></div>
-                    <ng-template #notFav><button  (click)="addFav()" type="button" class="btn btn-outline-primary" id="butt"><i class="far fa-bookmark fa-2x float-left"></i>Add to Favorites</button></ng-template>
-                    <ng-template #Fav><button type="button" class="btn btn-outline-success"><i class="far fa-bookmark fa-2x float-left"></i>Added to Favorites</button></ng-template>
+                    <ng-template #notFav><button  (click)="addFav()" type="button" class="btn btn-outline-primary" id="butt"><i class="far fa-bookmark fa-1x float-left"></i>Add to Favorites</button></ng-template>
+                    <ng-template #Fav><button type="button" class="btn btn-outline-success" style="margin-top: 1rem"><i class="far fa-bookmark fa-1x float-left"></i>Added to Favorites</button></ng-template>
                 </div>
-            </div>
+            </article>
         </div>
     </div>
-</div>
+</main>

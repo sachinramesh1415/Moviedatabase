@@ -19,7 +19,7 @@ export class FavoriteService {
     favo.title = movie.title;
     favo.overview = movie.overview;
     favo.vote_average = movie.vote_average;
-    favo.comments = [""];
+    favo.comments = [];
     return this.http.post(this.URL, favo, {headers: new HttpHeaders({'Content-Type':  'application/json',})});
   }
   removeFavorites(id) {

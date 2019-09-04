@@ -1,5 +1,5 @@
  <div id="hspace"></div>
- <div class="jumbotron jumbotron-fluid">
+ <main class="jumbotron jumbotron-fluid">
     <form action="">
         <div class="p-1 bg-light rounded rounded-pill shadow-sm mb-4">
             <div class="input-group">
@@ -10,9 +10,9 @@
             </div>
         </div>
     </form>
-</div>
+</main>
 <div class="container" id="padcor">
-    <div class="row">
+    <article class="row">
         <div class="col-sm-4" id="padcorr" *ngFor="let movie of movies.results">
             <div class="card" >
                 <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img-top" alt="Movie Image">
@@ -23,5 +23,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </article>
 </div>

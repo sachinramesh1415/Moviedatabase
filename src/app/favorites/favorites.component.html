@@ -1,17 +1,17 @@
 <div id="hspace"></div>
-<div class="jumbotron jumbotron-fluid">
+<main class="jumbotron jumbotron-fluid">
     <div class="container">
       <h1 class="display-4 text-center">Favorites</h1>
     </div>
-</div>
+</main>
 <div class="container">
-    <div class="row mb-3" *ngFor="let f of favoritesList">
+    <section class="row mb-3" *ngFor="let f of favoritesList">
         <div class="card">
             <div class="row no-gutters">
-                <div class="col-md-2">          
+                <aside class="col-md-2">          
                     <img src="https://image.tmdb.org/t/p/w500{{f.poster_path}}" class="card-img" alt="Movie Image">
-                </div>
-                <div class="col-md-10">
+                </aside>
+                <article class="col-md-10">
                     <div class="card-body">
                         <h5 class="card-title">{{f.title}}</h5>
                         <p class="card-text">{{f.overview}}</p>
@@ -33,8 +33,8 @@
                         </div>
                         <button type="button" (click)="removeFav(f.id)" class="btn btn-outline-danger">Remove from Favorites</button>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
-    </div>
+    </section>
 </div>

@@ -8,7 +8,7 @@
             <article class="col-md-8">
                 <div class="card-body">
                     <h3 class="card-title text-center">{{movie.title}}</h3>
-                    <div style="text-align: center">
+                    <div id="txtcent">
                         <p class="card-text text-muted">{{movie.tagline}}</p>
                         <button type="button" *ngFor="let genre of movie.genres" class="btn btn-outline-primary ml-4 mr-4 mb-3 mt-1">{{genre.name}}</button>
                     </div>
@@ -19,8 +19,8 @@
                     <p class="card-text">Runtime : {{movie.runtime}}</p>
                     <a href="{{movie.homepage}}" class="card-text">{{movie.homepage}}</a><br>
                     <div *ngIf="check; then Fav else notFav"></div>
-                    <ng-template #notFav><button  (click)="addFav()" type="button" class="btn btn-outline-primary" id="butt"><i class="far fa-bookmark fa-1x float-left"></i>Add to Favorites</button></ng-template>
-                    <ng-template #Fav><button type="button" class="btn btn-outline-success" style="margin-top: 1rem"><i class="far fa-bookmark fa-1x float-left"></i>Added to Favorites</button></ng-template>
+                    <ng-template #notFav><button  (click)="addFav()" type="button" class="btn btn-outline-primary butt"><i class="far fa-bookmark fa-1x float-left"></i>Add to Favorites</button></ng-template>
+                    <ng-template #Fav><button type="button" class="btn btn-outline-success butt"><i class="far fa-bookmark fa-1x float-left"></i>Added to Favorites</button></ng-template>
                 </div>
             </article>
         </div>

@@ -11,15 +11,15 @@
        </div>
    </form>
 </section>
-<h3 style="text-align: center" class="mb-4">Showing results for "{{quer}}"</h3>
+<h3 id="txtcen" class="mb-4">Showing results for "{{quer}}"</h3>
 <main class="container">
-    <div class="row mb-3" *ngFor="let movie of movies.results">
+    <section class="row mb-3" *ngFor="let movie of movies.results">
         <div class="card">
             <div class="row no-gutters">
-                <div class="col-md-2">          
+                <aside class="col-md-2">          
                     <img src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" class="card-img" alt="Movie Image">
-                </div>
-                <div class="col-md-10">
+                </aside>
+                <article class="col-md-10">
                     <div class="card-body">
                         <h5 class="card-title">{{movie.title}}</h5>
                         <p class="card-text">{{movie.overview}}</p>
@@ -27,8 +27,8 @@
                         <p class="card-text">Rating : {{movie.vote_average}}</p>
                         <a (click)="onClick(movie)" class="stretched-link"></a>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
-    </div>
+    </section>
 </main>
